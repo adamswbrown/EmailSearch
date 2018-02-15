@@ -1,13 +1,3 @@
-function UserAction() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "Your Rest URL Here", true);
-    xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-    var response = JSON.parse(xhttp.responseText);
-}
-
-
-
 <!doctype html>
 
 <html lang="en">
@@ -33,7 +23,6 @@ function UserAction() {
 }
 </script>
 
-Get Domain Input
 
 
 <button type="submit" onclick="UserAction()">Search</button>
