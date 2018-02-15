@@ -1,0 +1,41 @@
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "Your Rest URL Here", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+}
+
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Email Service Check</title>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+<script>
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "https://api.mxtoolbox.com/api/v1/lookup/mx/cloudmigrator365.com", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("Authorization", "398b3ce5-6dd9-4107-9faa-d0f995c1b97a");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+}
+</script>
+
+Get Domain Input
+
+
+<button type="submit" onclick="UserAction()">Search</button>
+</body>
+</html>
